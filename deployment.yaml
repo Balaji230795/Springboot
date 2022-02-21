@@ -4,7 +4,7 @@ metadata:
   name: springboot
   namespace: default
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: springboot
@@ -16,7 +16,7 @@ spec:
       containers:
       - name: springboot
         image: 616689340588.dkr.ecr.ap-south-1.amazonaws.com/springboot:latest
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
            - containerPort : 8080
 ---
