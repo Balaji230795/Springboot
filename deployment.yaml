@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: springboot
+  name: springboot-app
   namespace: default
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: springboot
+      app: springboot-app
   template:
     metadata:
       labels:
-        app: springboot
+        app: springboot-app
     spec:
       containers:
-      - name: springboot
+      - name: springboot-app
         image: balaji2307/springboot
         imagePullPolicy: Always
         ports:
@@ -23,11 +23,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: springboot
+  name: springboot-app
 spec:
   type: LoadBalancer
   selector:
-    app: springboot
+    app: springboot-app
   ports:
   - protocol: "TCP"
     port: 8080
