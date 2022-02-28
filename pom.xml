@@ -14,7 +14,7 @@
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -35,11 +35,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-            		<plugin>
-                		<groupId>org.sonarsource.scanner.maven</groupId>
-                		<artifactId>sonar-maven-plugin</artifactId>
-                		<version>3.4.0.905</version>
-            		</plugin>
 		</plugins>
 		<finalName>spring-boot-docker</finalName>
 	</build>
